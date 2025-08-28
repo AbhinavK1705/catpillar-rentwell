@@ -883,7 +883,7 @@ class EquipmentMLPipeline:
         print("\nTraining Return Date Prediction Model...")
         
         features = ['equipment_type_encoded', 'location_encoded', 'age_months', 
-                   'usage_hours', 'demand', 'month']
+                   'usage_hours', 'month']
         
         X = df[features]
         y = df['rental_duration']
@@ -966,7 +966,7 @@ class EquipmentMLPipeline:
         
         # Return date prediction
         return_features = ['equipment_type_encoded', 'location_encoded', 'age_months', 
-                          'usage_hours', 'demand', 'month']
+                          'usage_hours', 'month']
         rental_duration = self.return_model.predict(df_processed[return_features])[0]
         results['predicted_rental_duration'] = max(1, int(rental_duration))
         
