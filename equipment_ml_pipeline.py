@@ -1453,4 +1453,3 @@ def main():
 # Execute if running in Colab or directly
 if __name__ == "__main__":
     pipeline, data = main()
-
